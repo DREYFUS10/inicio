@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ES-es">
+<head>
+	<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"> <!--ayuda su visualizacion en dispositivos moviles, en este caso, evitar hacer zoom a la web en dispositivos moviles que podria estropear la visivilidad del sitio dandole una escala 1:1 a todo los elementos -->
+<link rel="stylesheet" type="text/css" href="semana16.css">
+	<title>formulario</title>
+	
+</head>
+
+<body>
+	<h1>Historia del Perú</h1>
+	<p>La historia del Perú es la historia del territorio del actual Perú, que abarca desde los restos más antiguos de ocupación de los humanos hasta nuestros días. Los primeros grupos humanos llegaron hacia fines de la glaciación wisconsiense (XI milenio a. C.) como cazadores-recolectores (periodo lítico). Sus descendientes empezaron a desarrollar la horticultura hacia el VIII milenio a. C. (periodo arcaico), época en la que también se domesticaron los camélidos sudamericanos y empezaron a aparecer las primeras aldeas.
+
+El nacimiento de la civilización en el Perú corresponde a la llamada civilización Caral, cuyo centro más conocido en la actualidad fue la ciudad de Caral, en el valle de Supe, en la costa central peruana. Esta cultura se desarrolló entre 3200 y 1800 a. C. Es el núcleo civilizatorio más antiguo de las Américas y contemporáneo de otros grandes centros de irradiación cultural del mundo, como Sumeria, Egipto, China e India. Es la época en que surgen las primeras sociedades con arquitectura monumental que tejieron una extensa red de comercio vinculando productos de la Amazonía y las costas ecuatorianas. A partir de entonces se dio inicio un escalamiento en la complejidad social y cultural de los pueblos de la región, que dio nacimiento a las civilizaciones andinas.</p>
+<center><h1>Ejemplos de formularios</h1></center>
+<form action="#" method="POST" enctype="multipart/form-data" >  <!-- el encrtype de tipo multipar se utilaza para encriptar archivos adjuntos en el formulario -->
+	<fieldset>
+<legend>informacion basica</legend>
+
+	<label class="Especifico">Nombre: <input type="text" name="nombrecompleto" size="60"> </label> <br><br>
+<label>Apellido <input type="text" name="apellidos" size="60" minlength="2" maxlength="100" pattern="[A-Za-z ]+" title="solo se permiten texto en mayusculas o minusculas" required  ></label><br><br>
+<label>Fecha de nacimiento
+	<input type="date" value="2000-01-01" min="1990-10-10" max="2030-01-01" name="nacimiento">
+</label>
+<label>DNI:	<input type="tex" name="dni" size="19" minlength="8" maxlength="8" pattern="[0-9]+" title="solo numeros ,logitud 8 caracteres" required></label>
+<br><br>
+
+<label>correo electronico:
+	<input type="email" placeholder="micorreo@gmail.com" size="50" name="correo" required>
+</label><br><br>
+
+<label>Telefono:
+	<input type="tel" name="telefono" required>
+	</label>
+
+ <label>Sexo: </label>
+<input type="radio" name="genero" value="Varón" checked>
+<label>Varòn:</label>
+<input type="radio" name="genero" value="Mujer">
+<label>Mujer:</label>
+<br> <br>
+<label>ciudad de nacimiento: 
+	     <select name="ciudades" id="ciudades">
+    <option value="cajamarca">cajamarca</option>
+    <option value="trujillo">trujillo</option>
+    <option value="lima">lima</option>
+    <option value="chiclayo">chiclayo</option>
+  </select> </label>
+<br><br>
+<label>foto:
+	<input type="file" name="txtFoto"/>
+</label>
+<label>ciudad de nacimiento: 
+	     <select name="ciudades" id="ciudades">
+    <option value="cajamarca">cajamarca</option>
+    <option value="trujillo">trujillo</option>
+    <option value="lima">lima</option>
+    <option value="chiclayo">chiclayo</option>
+  </select> </label>
+</fieldset>
+<fieldset>
+	<legend>informacion adicional</legend>
+<br>
+	<label>Idiomas:<br>
+		<input type="checkbox" name="idioma" value="español" checked>
+		<span>español</span><br>
+		<input type="checkbox" name="idioma" value="ingles">
+		<span>ingles</span><br>
+		<input type="checkbox" name="idioma" value="Aleman">
+		<span>Aleman</span><br>
+	</label>
+	<br>
+<label>
+Seleccione su curso:<br>
+<select name="curso" size="4" > <!-- se puede aplicar "multiple" y seleccionar vatias opciones usando el boton control" -->
+	<option value="Windows">Windows</option>
+	<option value="Word">Word</option>
+	<option value="Excel">Excel</option>
+	<option value="Access">Access</option>
+	<option value="Power Point">Power Point</option>
+	<option value="Flash">Flash</option>
+	<option value="Photoshop">Photoshop</option>
+</select><br><br>
+</label>
+<label>Mensaje: <br>
+<textarea name="mensaje" rows="5" cons="40" ></textarea>
+</label>
+<br><br>
+<label>contraseña:
+	<input type="password" size="15" title="Contraseña" name="password" required></label> 
+
+
+</fieldset>
+<br>
+<input type="submit" value="Enviar datos">
+
+<input type="reset" value="Borrar datos">
+
+
+
+</form>
+</body>
+</html>
