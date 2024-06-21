@@ -1,104 +1,119 @@
 <!DOCTYPE html>
-<html lang="ES-es">
+<html lang="es">
 <head>
-	<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1"> <!--ayuda su visualizacion en dispositivos moviles, en este caso, evitar hacer zoom a la web en dispositivos moviles que podria estropear la visivilidad del sitio dandole una escala 1:1 a todo los elementos -->
-<link rel="stylesheet" type="text/css" href="semana16.css">
-	<title>formulario</title>
-	
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil Personal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .profile-container {
+            display: flex;
+            flex-grow: 1;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            width: 80%;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+        .profile-photo img {
+            width: 85%;
+            height: 100%;
+            object-fit: cover;
+            margin-left: 55px; /* Ajusta el margen izquierdo */
+        }
+        .photo-section {
+            flex: 1;
+            max-width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        .text-section {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .header-container {
+            border: 20px solid #ffcc00;
+            padding: 20px;
+            display: inline-block;
+            margin-bottom: 20px;
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .header {
+            font-size: 2em;
+            color: #333;
+            margin: 0;
+        }
+        .greeting {
+            font-size: 1.5em;
+            margin: 10px 0;
+            color: #333;
+        }
+        .description {
+            line-height: 1.6;
+            text-align: justify;
+        }
+        .description p {
+            margin: 10px 0;
+        }
+        .description ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .description ul li {
+            margin: 5px 0;
+        }
+        footer {
+            text-align: center;
+            font-size: 0.9em;
+            color: #777;
+            padding: 20px 0;
+            background-color: #fff;
+            width: 100%;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+            margin-top: auto;
+        }
+    </style>
 </head>
-
 <body>
-	<h1>Historia del Perú</h1>
-	<p>La historia del Perú es la historia del territorio del actual Perú, que abarca desde los restos más antiguos de ocupación de los humanos hasta nuestros días. Los primeros grupos humanos llegaron hacia fines de la glaciación wisconsiense (XI milenio a. C.) como cazadores-recolectores (periodo lítico). Sus descendientes empezaron a desarrollar la horticultura hacia el VIII milenio a. C. (periodo arcaico), época en la que también se domesticaron los camélidos sudamericanos y empezaron a aparecer las primeras aldeas.
+    <div class="profile-container">
+        <div class="photo-section">
+            <div class="profile-photo">
+                <img src="Niver.png" alt="Foto de perfil">
+            </div>
+        </div>
+        <div class="text-section">
+            <div class="header-container">
+                <div class="greeting" style="text-align: right; margin-top: 10px; font-size: 0.9em;">¡Hola! Bienvenidos a mi página personal</div>
+                <div class="header"> <strong>Quispe Cabanillas Niver</strong></div>
+            </div>
+            <div class="description">
+                <p>Mi nombre es Niver Quispe Cabanillas y es un placer presentarme ante ustedes. Soy una persona dedicada y adaptable, con una gran inclinación por el aprendizaje continuo y la mejora constante. Me destaco en la comunicación efectiva, la resolución creativa de problemas y una fuerte orientación al detalle y a la organización.</p>
 
-El nacimiento de la civilización en el Perú corresponde a la llamada civilización Caral, cuyo centro más conocido en la actualidad fue la ciudad de Caral, en el valle de Supe, en la costa central peruana. Esta cultura se desarrolló entre 3200 y 1800 a. C. Es el núcleo civilizatorio más antiguo de las Américas y contemporáneo de otros grandes centros de irradiación cultural del mundo, como Sumeria, Egipto, China e India. Es la época en que surgen las primeras sociedades con arquitectura monumental que tejieron una extensa red de comercio vinculando productos de la Amazonía y las costas ecuatorianas. A partir de entonces se dio inicio un escalamiento en la complejidad social y cultural de los pueblos de la región, que dio nacimiento a las civilizaciones andinas.</p>
-<center><h1>Ejemplos de formularios</h1></center>
-<form action="#" method="POST" enctype="multipart/form-data" >  <!-- el encrtype de tipo multipar se utilaza para encriptar archivos adjuntos en el formulario -->
-	<fieldset>
-<legend>informacion basica</legend>
-
-	<label class="Especifico">Nombre: <input type="text" name="nombrecompleto" size="60"> </label> <br><br>
-<label>Apellido <input type="text" name="apellidos" size="60" minlength="2" maxlength="100" pattern="[A-Za-z ]+" title="solo se permiten texto en mayusculas o minusculas" required  ></label><br><br>
-<label>Fecha de nacimiento
-	<input type="date" value="2000-01-01" min="1990-10-10" max="2030-01-01" name="nacimiento">
-</label>
-<label>DNI:	<input type="tex" name="dni" size="19" minlength="8" maxlength="8" pattern="[0-9]+" title="solo numeros ,logitud 8 caracteres" required></label>
-<br><br>
-
-<label>correo electronico:
-	<input type="email" placeholder="micorreo@gmail.com" size="50" name="correo" required>
-</label><br><br>
-
-<label>Telefono:
-	<input type="tel" name="telefono" required>
-	</label>
-
- <label>Sexo: </label>
-<input type="radio" name="genero" value="Varón" checked>
-<label>Varòn:</label>
-<input type="radio" name="genero" value="Mujer">
-<label>Mujer:</label>
-<br> <br>
-<label>ciudad de nacimiento: 
-	     <select name="ciudades" id="ciudades">
-    <option value="cajamarca">cajamarca</option>
-    <option value="trujillo">trujillo</option>
-    <option value="lima">lima</option>
-    <option value="chiclayo">chiclayo</option>
-  </select> </label>
-<br><br>
-<label>foto:
-	<input type="file" name="txtFoto"/>
-</label>
-<label>ciudad de nacimiento: 
-	     <select name="ciudades" id="ciudades">
-    <option value="cajamarca">cajamarca</option>
-    <option value="trujillo">trujillo</option>
-    <option value="lima">lima</option>
-    <option value="chiclayo">chiclayo</option>
-  </select> </label>
-</fieldset>
-<fieldset>
-	<legend>informacion adicional</legend>
-<br>
-	<label>Idiomas:<br>
-		<input type="checkbox" name="idioma" value="español" checked>
-		<span>español</span><br>
-		<input type="checkbox" name="idioma" value="ingles">
-		<span>ingles</span><br>
-		<input type="checkbox" name="idioma" value="Aleman">
-		<span>Aleman</span><br>
-	</label>
-	<br>
-<label>
-Seleccione su curso:<br>
-<select name="curso" size="4" > <!-- se puede aplicar "multiple" y seleccionar vatias opciones usando el boton control" -->
-	<option value="Windows">Windows</option>
-	<option value="Word">Word</option>
-	<option value="Excel">Excel</option>
-	<option value="Access">Access</option>
-	<option value="Power Point">Power Point</option>
-	<option value="Flash">Flash</option>
-	<option value="Photoshop">Photoshop</option>
-</select><br><br>
-</label>
-<label>Mensaje: <br>
-<textarea name="mensaje" rows="5" cons="40" ></textarea>
-</label>
-<br><br>
-<label>contraseña:
-	<input type="password" size="15" title="Contraseña" name="password" required></label> 
-
-
-</fieldset>
-<br>
-<input type="submit" value="Enviar datos">
-
-<input type="reset" value="Borrar datos">
-
-
-
-</form>
+                <p><strong>En el curso de Informática IV, he aprendido los fundamentos del desarrollo web utilizando HTML y el editor de texto Sublime Text. Exploramos la estructura y diseño de páginas web mediante el uso de etiquetas, atributos y elementos para crear contenido de manera efectiva. La práctica con Sublime Text me ha ayudado a familiarizarme con sus funciones y atajos, mejorando mi productividad y precisión al escribir código.</strong></p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Niver Quispe Cabanillas</p>
+    </footer>
 </body>
 </html>
+
